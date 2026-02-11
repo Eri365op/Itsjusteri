@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>your nyash will burn</title>
+  <style>
+    body {
+      background-color: #111; /* dark background */
+      color: violet; /* white text */
+      font-family: 'Cursive', sans-serif; /* fancy swirly font */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 250px;
+      text-align: center;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin-left: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #ff69b4;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome Bbg</h1>
+  <p>Enter your name:</p>
+  <div>
+    <input type="text" id="nameInput" placeholder="Type name...">
+    <button onclick="checkName()">Go</button>
+  </div>
+
+  <script>
+    function checkName() {
+      var name = document.getElementById('nameInput').value.trim().toLowerCase();
+
+      if(name === "fortune") {
+        window.location.href = "fortune.html"; // link to the fortune page
+      } 
+       else if(name === "deborah") {
+        window.location.href = "deborah.html"; // link to your the Deborah page 
+       else if(name === "divine") {
+    sessionStorage.setItem("allowed", "divine");
+    window.location.href = "divine.html";
+// link to the divine page
+      else {
+        alert("You he-goat thunder go castrate your nyash!");
+      }
+    }
+  </script>
+  <script>
+function checkName() {
+  var name = document.getElementById('nameInput').value.trim().toLowerCase();
+  
+  if(name === "fortune" || name === "deborah" || name === "divine" ) {
+    // Set session for secret page
+    sessionStorage.setItem("allowed", name);
+
+    // Animate feedback
+    const inputBox = document.getElementById('nameInput');
+    inputBox.style.transition = "0.5s";
+    inputBox.style.boxShadow = "0 0 20px #ccccFF";
+
+    const msg = document.createElement("p");
+    msg.style.color = "#b100cd";
+    msg.style.fontSize = "24px";
+    msg.style.marginTop = "20px";
+    document.body.appendChild(msg);
+
+    let i = 0;
+    let text = "Davinci on your mona lisa...";
+    function typeWriter() {
+      if (i < text.length) {
+        msg.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      } else {
+        // Redirect after animation finishes
+        window.location.href = name + ".html";
+      }
+    }
+    typeWriter();
+  } else {
+    alert("You he-goat thunder go castrate your nyash!");
+  }
+}
+  </script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hold down the fort</title>
+  <style>
+    body {
+      background:#cc5500;
+      color: black;
+      font-family: monospace;
+      font-size: 20px;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <pre>
+<img src="https://iili.io/fyGbRkP.png" alt="silly 6'4 me" width="150">
+𝓗𝓮𝔂 𝓯𝓸𝓻𝓽,🙃<br>
+𝓲 𝔀𝓪𝓷𝓽 𝓽𝓸 𝓹𝓸𝓾𝓷𝓭 𝔂𝓸𝓾 
+𝓼𝓸 𝓱𝓪𝓻𝓭 𝔀𝓲𝓽𝓱 𝓶𝔂
+𝓼𝓽𝓲𝓯𝓯 𝓱𝓸𝓽 𝓻𝓸𝓭 𝓽𝓲𝓵𝓵 
+𝔂𝓸𝓾 𝓬𝓾𝓶 𝓸𝓾𝓽𝓽𝓪 𝔂𝓪 𝓯𝓸𝓸𝓽<br>
+...<br>
+𝓳𝓾𝓼𝓽 𝓴𝓲𝓭𝓭𝓲𝓷𝓰, 𝓱𝓪𝓹𝓹𝔂 𝓿𝓪𝓵𝓮𝓷𝓽𝓲𝓷𝓮'𝓼 𝓭𝓪𝔂
+𝓲 𝓵𝓸𝓿𝓮 𝔂𝓪
+
+𝓽𝓱𝓲𝓼 𝓲𝓼 𝔂𝓸𝓾𝓻 𝓻𝓮𝓶𝓲𝓷𝓭𝓮𝓻 
+𝓽𝓸 𝓬𝓸𝓷𝓭𝓲𝓽𝓲𝓸𝓷 𝔂𝓸𝓾𝓻 𝓪𝓼𝓼 𝓱𝓪𝓲𝓻, 
+𝓲 𝔀𝓪𝓷𝓽 𝓽𝓱𝓪𝓽 𝓫𝓪𝓫𝔂 𝓵𝓸𝓷𝓰
+<img src="https://iili.io/fyiQMqF.jpg" alt="oops silly 6'4 me" width="200">
+</pre>
+<script>
+  // Check if user came via the main page
+  const allowed = sessionStorage.getItem("allowed");
+  if(allowed !== "fortune") {
+    alert("You he-goat thunder go castrate your nyash!!");
+    window.location.href = "index.html"; // go back to main page
+  </script>
+  <style>
+.flower {
+  position: fixed;
+  font-size: 30px;
+  pointer-events: none;
+  animation: floatUp 2s linear forwards;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100px); opacity: 0; }
+}
+</style>
+  <script>
+document.addEventListener("click", (e) => {
+  const flower = document.createElement("div");
+  flower.innerHTML = "🌸"; // change to 💖 ✨ 🌺 🌼
+  flower.className = "flower";
+  flower.style.left = e.clientX + "px";
+  flower.style.top = e.clientY + "px";
+  document.body.appendChild(flower);
+
+  setTimeout(() => flower.remove(), 2000);
+});
+  </script>
+</body>
+</html>
